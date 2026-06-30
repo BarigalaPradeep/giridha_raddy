@@ -1,0 +1,88 @@
+@import "tailwindcss";
+
+@theme {
+  --color-surface-container-low: #f3f3f3;
+  --color-background: #f9f9f9;
+  --color-on-tertiary: #ffffff;
+  --color-secondary-fixed: #e5e2e1;
+  --color-tertiary-container: #cac2b2;
+  --color-inverse-primary: #fdbc0a;
+  --color-surface-dim: #dadada;
+  --color-on-background: #1a1c1c;
+  --color-tertiary-fixed-dim: #cec6b6;
+  --color-primary-container: #f9b800;
+  --color-secondary-fixed-dim: #c9c6c5;
+  --color-surface-container-lowest: #ffffff;
+  --color-on-primary-container: #684b00;
+  --color-on-surface: #1a1c1c;
+  --color-primary-fixed-dim: #fdbc0a;
+  --color-on-primary-fixed: #261900;
+  --color-tertiary: #635e51;
+  --color-on-secondary: #ffffff;
+  --color-inverse-surface: #2f3131;
+  --color-on-error: #ffffff;
+  --color-on-secondary-container: #656464;
+  --color-surface-tint: #7a5900;
+  --color-secondary-container: #e5e2e1;
+  --color-surface-container: #eeeeee;
+  --color-outline: #827560;
+  --color-on-primary: #ffffff;
+  --color-on-tertiary-fixed-variant: #4b463a;
+  --color-primary: #7a5900;
+  --color-surface-container-high: #e8e8e8;
+  --color-inverse-on-surface: #f1f1f1;
+  --color-error-container: #ffdad6;
+  --color-primary-fixed: #ffdea3;
+  --color-surface-bright: #f9f9f9;
+  --color-on-secondary-fixed: #1c1b1b;
+  --color-error: #ba1a1a;
+  --color-surface-variant: #e2e2e2;
+  --color-outline-variant: #d4c4ac;
+  --color-on-secondary-fixed-variant: #474646;
+  --color-on-error-container: #93000a;
+  --color-tertiary-fixed: #eae2d1;
+  --color-surface: #f9f9f9;
+  --color-on-surface-variant: #504532;
+  --color-secondary: #5f5e5e;
+  --color-on-tertiary-container: #555043;
+  --color-surface-container-highest: #e2e2e2;
+  --color-on-primary-fixed-variant: #5d4200;
+  --color-on-tertiary-fixed: #1f1b11;
+
+  --border-radius-DEFAULT: 0.25rem;
+  --border-radius-lg: 0.5rem;
+  --border-radius-xl: 0.75rem;
+  --border-radius-2xl: 1.5rem;
+  --border-radius-full: 9999px;
+
+  --spacing-gutter: 24px;
+  --spacing-stack-md: 24px;
+  --spacing-unit: 8px;
+  --spacing-margin-mobile: 16px;
+  --spacing-margin-desktop: 64px;
+  --spacing-container-max: 1440px;
+  --spacing-stack-lg: 48px;
+  --spacing-stack-sm: 12px;
+
+  --font-headline-xl: "Plus Jakarta Sans", sans-serif;
+  --font-body-md: "Work Sans", sans-serif;
+  --font-display-lg: "Plus Jakarta Sans", sans-serif;
+  --font-body-lg: "Work Sans", sans-serif;
+  --font-headline-md: "Plus Jakarta Sans", sans-serif;
+  --font-label-bold: "Work Sans", sans-serif;
+  --font-stat-number: "Plus Jakarta Sans", sans-serif;
+}
+
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+}
+.sunlight-blur {
+  background: radial-gradient(circle at 50% 50%, rgba(249, 184, 0, 0.15) 0%, rgba(249, 184, 0, 0) 70%);
+}
+.premium-gradient {
+  background: linear-gradient(135deg, #f9b800 0%, #7a5900 100%);
+}
+.glass-card {
+  backdrop-filter: blur(20px);
+  background: rgba(255, 255, 255, 0.8);
+}
