@@ -11,9 +11,11 @@
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.3.2",
+    "leaflet": "^1.9.4",
     "lucide-react": "^1.22.0",
     "react": "^19.2.7",
     "react-dom": "^19.2.7",
+    "react-leaflet": "^5.0.0",
     "tailwindcss": "^4.3.2"
   },
   "devDependencies": {
@@ -24,5 +26,18 @@
     "oxlint": "^1.71.0",
     "typescript": "~6.0.2",
     "vite": "^8.1.1"
-  }
+  },
+  "description": "This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BarigalaPradeep/giridha_raddy.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BarigalaPradeep/giridha_raddy/issues"
+  },
+  "homepage": "https://github.com/BarigalaPradeep/giridha_raddy#readme"
 }
