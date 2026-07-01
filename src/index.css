@@ -71,6 +71,46 @@
   --font-headline-md: "Plus Jakarta Sans", sans-serif;
   --font-label-bold: "Work Sans", sans-serif;
   --font-stat-number: "Plus Jakarta Sans", sans-serif;
+
+  --animate-fade-in: fade-in 0.5s ease-out;
+  --animate-fade-in-up: fade-in-up 0.5s ease-out;
+  --animate-fade-in-right: fade-in-right 0.5s ease-out;
+  --animate-scale-up: scale-up 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+
+  @keyframes fade-in {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  @keyframes fade-in-up {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  @keyframes fade-in-right {
+    from {
+      opacity: 0;
+      transform: translateX(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  @keyframes scale-up {
+    from {
+      opacity: 0;
+      transform: scale(0.9);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
 }
 
 .material-symbols-outlined {
@@ -85,4 +125,8 @@
 .glass-card {
   backdrop-filter: blur(20px);
   background: rgba(255, 255, 255, 0.8);
+}
+
+.text-shadow-white {
+  text-shadow: 0 1px 3px rgba(255, 255, 255, 1), 0 0 6px rgba(255, 255, 255, 0.9), 0 0 12px rgba(255, 255, 255, 0.8);
 }

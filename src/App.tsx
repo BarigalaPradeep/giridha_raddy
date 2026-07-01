@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
+import Home from "./components/Home";
 import DirectorySection from "./components/Directory/DirectorySection";
 import SuggestionForm from "./components/Suggestion/SuggestionForm";
 import SuggestionsExplorer from "./components/Suggestion/SuggestionsExplorer";
@@ -70,7 +71,12 @@ function App() {
       />
 
       {/* Main Content Area */}
-      {activeTab === "leaders" ? (
+      {activeTab === "home" ? (
+        <Home
+          language={language}
+          setActiveTab={setActiveTab}
+        />
+      ) : activeTab === "leaders" ? (
         <main className="flex-grow relative">
           {/* Hero Landing */}
           <Hero language={language} suggestionsCount={suggestions.length} />
