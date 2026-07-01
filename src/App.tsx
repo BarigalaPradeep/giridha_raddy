@@ -5,6 +5,7 @@ import DirectorySection from "./components/Directory/DirectorySection";
 import SuggestionForm from "./components/Suggestion/SuggestionForm";
 import SuggestionsExplorer from "./components/Suggestion/SuggestionsExplorer";
 import Footer from "./components/Footer";
+import DevMap from "./components/Map/DevMap";
 import { type Language, translations } from "./data/translations";
 import { initialSuggestions, type CitizenSuggestion } from "./data/suggestions";
 
@@ -158,6 +159,8 @@ function App() {
             onUpvote={handleUpvote}
           />
         </main>
+      ) : activeTab === "devmap" ? (
+        <DevMap language={language} />
       ) : (
         /* Premium 404 Page Not Found Screen */
         <main className="flex-grow flex items-center justify-center py-20 px-6 relative overflow-hidden transition-colors duration-300">

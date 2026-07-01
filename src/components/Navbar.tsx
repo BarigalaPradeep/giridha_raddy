@@ -118,12 +118,11 @@ export const Navbar: React.FC<NavbarProps> = ({
           <a
             href="#home"
             onClick={() => setMobileMenuOpen(false)}
-            className={`font-semibold text-sm py-2 hover:text-[#f5b81a] flex items-center gap-2 ${
+            className={`block font-semibold text-sm py-2 hover:text-[#f5b81a] ${
               activeTab === "home" ? "text-[#f5b81a] font-bold" : "text-zinc-700 dark:text-zinc-300"
             }`}
           >
-            <span className="material-symbols-outlined text-lg">home</span>
-            <span>{t.navHome}</span>
+            {t.navHome}
           </a>
           <a
             href="#devmap"

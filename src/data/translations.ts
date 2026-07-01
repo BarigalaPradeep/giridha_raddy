@@ -3,7 +3,7 @@ export type Language = "en" | "te";
 export const translations = {
   en: {
     navHome: "Home",
-    navDevMap: "Development Map",
+    navDevMap: "Map",
     navWorks: "Works",
     navVoice: "People's Voice",
     navLeaders: "Leaders",
@@ -90,7 +90,7 @@ export const translations = {
   },
   te: {
     navHome: "హోమ్",
-    navDevMap: "అభివృద్ధి పటం",
+    navDevMap: "పటం",
     navWorks: "పనులు",
     navVoice: "ప్రజల గళం",
     navLeaders: "నాయకులు",
