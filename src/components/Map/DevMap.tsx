@@ -459,8 +459,8 @@ export const DevMap: React.FC<DevMapProps> = ({ language }) => {
                   className="flex items-center gap-2 px-6 py-2.5 rounded-full border border-white/20 text-white font-semibold text-sm hover:bg-white/10 transition-all cursor-pointer"
                 >
                   <span>
-                    {showAllFeedback 
-                      ? (isTe ? "తక్కువ చూపించు" : "Show Less") 
+                    {showAllFeedback
+                      ? (isTe ? "తక్కువ చూపించు" : "Show Less")
                       : (isTe ? "మరిన్ని ఫీడ్‌బ్యాక్‌లు" : "View More Feedback")
                     }
                   </span>

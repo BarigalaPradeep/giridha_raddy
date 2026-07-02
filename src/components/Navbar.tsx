@@ -18,17 +18,16 @@ export const Navbar: React.FC<NavbarProps> = ({
   // Helper function to render nav links with dynamic active styling
   const renderNavLink = (tabId: string, label: string) => {
     const isActive = activeTab === tabId;
-    
+
     if (tabId === "home") {
       // Home button styling with yellow background and black text on active
       return (
         <a
           href="#home"
-          className={`font-semibold text-sm transition-all py-1.5 px-3.5 rounded-xl cursor-pointer flex items-center justify-center ${
-            isActive
-              ? "bg-[#f5b81a] text-zinc-950 font-bold shadow-sm"
-              : "text-zinc-700 dark:text-zinc-300 hover:text-[#f5b81a] dark:hover:text-primary-container hover:bg-zinc-100 dark:hover:bg-zinc-800"
-          }`}
+          className={`font-semibold text-sm transition-all py-1.5 px-3.5 rounded-xl cursor-pointer flex items-center justify-center ${isActive
+            ? "bg-[#f5b81a] text-zinc-950 font-bold shadow-sm"
+            : "text-zinc-700 dark:text-zinc-300 hover:text-[#f5b81a] dark:hover:text-primary-container hover:bg-zinc-100 dark:hover:bg-zinc-800"
+            }`}
         >
           <span>{label}</span>
         </a>
@@ -38,11 +37,10 @@ export const Navbar: React.FC<NavbarProps> = ({
     return (
       <a
         href={`#${tabId}`}
-        className={`font-semibold text-sm transition-all py-1.5 px-3.5 rounded-xl cursor-pointer flex items-center justify-center ${
-          isActive
-            ? "bg-[#f5b81a] text-zinc-950 font-bold shadow-sm"
-            : "text-zinc-755 dark:text-zinc-355 hover:text-[#f5b81a] dark:hover:text-primary-container hover:bg-zinc-100 dark:hover:bg-zinc-800"
-        }`}
+        className={`font-semibold text-sm transition-all py-1.5 px-3.5 rounded-xl cursor-pointer flex items-center justify-center ${isActive
+          ? "bg-[#f5b81a] text-zinc-950 font-bold shadow-sm"
+          : "text-zinc-755 dark:text-zinc-355 hover:text-[#f5b81a] dark:hover:text-primary-container hover:bg-zinc-100 dark:hover:bg-zinc-800"
+          }`}
       >
         {label}
       </a>
@@ -50,21 +48,21 @@ export const Navbar: React.FC<NavbarProps> = ({
   };
 
   return (
-    <header className="bg-[#fcfaf6]/95 dark:bg-zinc-900/95 backdrop-blur-md border-b border-outline-variant/30 sticky top-0 z-50 transition-colors duration-300 shadow-sm">
+    <header className="bg-white dark:bg-zinc-900/95 backdrop-blur-md border-b border-outline-variant/30 sticky top-0 z-50 transition-colors duration-300 shadow-sm">
       <div className="max-w-container-max mx-auto flex items-center justify-between px-4 md:px-margin-desktop py-3.5">
-        
+
         {/* Left Side: Brand Logo and Title */}
-        <a 
+        <a
           href="#leaders"
           className="flex items-center gap-3 cursor-pointer select-none"
         >
           {/* Circular logo badge matching screen */}
           <div className="w-12 h-12 rounded-full bg-[#f5b81a] flex items-center justify-center border-2 border-amber-400 shadow-sm relative group overflow-hidden">
             <span className="material-symbols-outlined text-zinc-950 text-2xl font-bold animate-pulse">
-              pedal_bike
+              <img src="/tdplogo.png" alt="" />
             </span>
           </div>
-          
+
           <div className="flex flex-col text-left">
             <span className="font-sans text-lg font-extrabold tracking-wide text-zinc-950 dark:text-zinc-100 leading-tight">
               {t.brandTitle}
@@ -118,63 +116,56 @@ export const Navbar: React.FC<NavbarProps> = ({
           <a
             href="#home"
             onClick={() => setMobileMenuOpen(false)}
-            className={`block font-semibold text-sm py-2 hover:text-[#f5b81a] ${
-              activeTab === "home" ? "text-[#f5b81a] font-bold" : "text-zinc-700 dark:text-zinc-300"
-            }`}
+            className={`block font-semibold text-sm py-2 hover:text-[#f5b81a] ${activeTab === "home" ? "text-[#f5b81a] font-bold" : "text-zinc-700 dark:text-zinc-300"
+              }`}
           >
             {t.navHome}
           </a>
           <a
             href="#devmap"
             onClick={() => setMobileMenuOpen(false)}
-            className={`block font-semibold text-sm py-2 hover:text-[#f5b81a] ${
-              activeTab === "devmap" ? "text-[#f5b81a] font-bold" : "text-zinc-700 dark:text-zinc-300"
-            }`}
+            className={`block font-semibold text-sm py-2 hover:text-[#f5b81a] ${activeTab === "devmap" ? "text-[#f5b81a] font-bold" : "text-zinc-700 dark:text-zinc-300"
+              }`}
           >
             {t.navDevMap}
           </a>
           <a
             href="#voice"
             onClick={() => setMobileMenuOpen(false)}
-            className={`block font-semibold text-sm py-2 hover:text-[#f5b81a] ${
-              activeTab === "voice" ? "text-[#f5b81a] font-bold" : "text-zinc-700 dark:text-zinc-300"
-            }`}
+            className={`block font-semibold text-sm py-2 hover:text-[#f5b81a] ${activeTab === "voice" ? "text-[#f5b81a] font-bold" : "text-zinc-700 dark:text-zinc-300"
+              }`}
           >
             {t.navVoice}
           </a>
           <a
             href="#leaders"
             onClick={() => setMobileMenuOpen(false)}
-            className={`block font-semibold text-sm py-2 hover:text-[#f5b81a] ${
-              activeTab === "leaders" ? "text-[#f5b81a] font-bold" : "text-zinc-700 dark:text-zinc-300"
-            }`}
+            className={`block font-semibold text-sm py-2 hover:text-[#f5b81a] ${activeTab === "leaders" ? "text-[#f5b81a] font-bold" : "text-zinc-700 dark:text-zinc-300"
+              }`}
           >
             {t.navLeaders}
           </a>
           <a
             href="#gallery"
             onClick={() => setMobileMenuOpen(false)}
-            className={`block font-semibold text-sm py-2 hover:text-[#f5b81a] ${
-              activeTab === "gallery" ? "text-[#f5b81a] font-bold" : "text-zinc-700 dark:text-zinc-300"
-            }`}
+            className={`block font-semibold text-sm py-2 hover:text-[#f5b81a] ${activeTab === "gallery" ? "text-[#f5b81a] font-bold" : "text-zinc-700 dark:text-zinc-300"
+              }`}
           >
             {t.navGallery}
           </a>
           <a
             href="#about"
             onClick={() => setMobileMenuOpen(false)}
-            className={`block font-semibold text-sm py-2 hover:text-[#f5b81a] ${
-              activeTab === "about" ? "text-[#f5b81a] font-bold" : "text-zinc-700 dark:text-zinc-300"
-            }`}
+            className={`block font-semibold text-sm py-2 hover:text-[#f5b81a] ${activeTab === "about" ? "text-[#f5b81a] font-bold" : "text-zinc-700 dark:text-zinc-300"
+              }`}
           >
             {t.navAbout}
           </a>
           <a
             href="#contact"
             onClick={() => setMobileMenuOpen(false)}
-            className={`block font-semibold text-sm py-2 hover:text-[#f5b81a] ${
-              activeTab === "contact" ? "text-[#f5b81a] font-bold" : "text-zinc-700 dark:text-zinc-300"
-            }`}
+            className={`block font-semibold text-sm py-2 hover:text-[#f5b81a] ${activeTab === "contact" ? "text-[#f5b81a] font-bold" : "text-zinc-700 dark:text-zinc-300"
+              }`}
           >
             {t.navContact}
           </a>
